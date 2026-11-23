@@ -1,0 +1,46 @@
+claim,expected_verdict,source_note
+Correlation shows how strongly two variables are related and change together.,Supported,Page 1
+Correlation can identify patterns of association without proving that one variable affects the other.,Supported,Page 1
+Ice cream sales and drowning rates may be positively correlated because both can increase during summer.,Supported,Page 1
+Causation describes a situation where a change in one variable causes a change in another variable.,Supported,Page 1
+The cause-and-effect relationship is another way to describe causation.,Supported,Page 1
+The document gives smoking and lung cancer as an example of causation.,Supported,Page 1
+Establishing causation requires additional evidence and careful consideration of confounding variables.,Supported,Page 1
+"For the age dataset, the median is 35.",Supported,Page 2
+The earthquake time series represents annual data covering 99 consecutive years.,Supported,Page 2
+The age dataset has no outliers according to the solution.,Supported,Page 2
+The range of the age dataset is 28.,Supported,Page 2
+The website visits show an overall increasing trend over the seven-day period.,Supported,Page 2
+The solution states that seasonality is not present in the seven-day website-visits data.,Supported,Page 2
+The annual earthquake time series has no consistent upward or downward trend over the entire period.,Supported,Page 3
+The earthquake time series is described as having no obvious outliers.,Supported,Page 3
+Correlation proves that one variable causes a change in another variable.,Contradicted,Page 1
+Correlation always establishes a cause-and-effect relationship between two variables.,Contradicted,Page 1
+Ice cream sales directly cause drowning rates to increase in summer.,Contradicted,Page 1
+"Causation means that two variables are merely associated, without one affecting the other.",Contradicted,Page 1
+The document says that establishing causation requires no additional evidence.,Contradicted,Page 1
+The median of the age dataset is 40.,Contradicted,Page 2
+The range of the age dataset is 51.,Contradicted,Page 2
+The age dataset contains an outlier according to the provided solution.,Contradicted,Page 2
+The website visits show an overall decreasing trend across the seven days.,Contradicted,Page 2
+The solution states that seasonality is present in the seven-day website-visits data.,Contradicted,Page 2
+The earthquake time series has a consistent upward trend throughout the entire period.,Contradicted,Page 3
+The earthquake time series is described as having clear seasonal patterns.,Contradicted,Page 3
+The earthquake time series contains obvious outliers according to the solution.,Contradicted,Page 3
+A univariate analysis examines the relationship between two variables.,Contradicted,Page 3
+"A restaurant satisfaction scenario involving wait time, food quality, and customer satisfaction is classified as bivariate in the document.",Contradicted,Page 3-4
+The capital of Australia is Canberra.,Unverified,Not discussed in reference PDF
+The Earth completes one revolution around the Sun in approximately 365 days.,Unverified,Not discussed in reference PDF
+Water freezes at 0 degrees Celsius under standard atmospheric pressure.,Unverified,Not discussed in reference PDF
+The human heart has four chambers.,Unverified,Not discussed in reference PDF
+Mount Everest is the highest mountain above sea level.,Unverified,Not discussed in reference PDF
+The Pacific Ocean is the largest ocean on Earth.,Unverified,Not discussed in reference PDF
+The chemical symbol for gold is Au.,Unverified,Not discussed in reference PDF
+"The speed of light in vacuum is approximately 300,000 kilometres per second.",Unverified,Not discussed in reference PDF
+The human body has 206 bones in a typical adult.,Unverified,Not discussed in reference PDF
+Jupiter is the largest planet in the Solar System.,Unverified,Not discussed in reference PDF
+The boiling point of pure water is 100 degrees Celsius at standard atmospheric pressure.,Unverified,Not discussed in reference PDF
+The Great Wall of China is located in China.,Unverified,Not discussed in reference PDF
+A triangle has three sides.,Unverified,Not discussed in reference PDF
+The currency of Japan is the yen.,Unverified,Not discussed in reference PDF
+The first person to walk on the Moon was Neil Armstrong.,Unverified,Not discussed in reference PDF

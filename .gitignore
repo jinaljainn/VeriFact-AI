@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+.streamlit/secrets.toml
+data/reference_pdfs/*.pdf
+results/detailed_error_diagnostics.json
+results/evidence_report.json
+results/evidence_report.pdf
+results/error_analysis.csv
+data/test_data/*.json

@@ -1,0 +1,64 @@
+{
+    "evaluation_date": "2026-11-23T11:36:24",
+    "total_claims": 45,
+    "correct_predictions": 45,
+    "incorrect_predictions": 0,
+    "accuracy": 1.0,
+    "classification_report": {
+        "Supported": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 15.0
+        },
+        "Contradicted": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 15.0
+        },
+        "Unverified": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 15.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+        },
+        "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 45.0
+        }
+    },
+    "confusion_matrix": {
+        "labels": [
+            "Supported",
+            "Contradicted",
+            "Unverified"
+        ],
+        "values": [
+            [
+                15,
+                0,
+                0
+            ],
+            [
+                0,
+                15,
+                0
+            ],
+            [
+                0,
+                0,
+                15
+            ]
+        ]
+    }
+}
