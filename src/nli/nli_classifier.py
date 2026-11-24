@@ -1,10 +1,10 @@
 
-import json
 from pathlib import Path
 
 import numpy as np
 import onnxruntime as ort
 from tokenizers import Tokenizer
+from huggingface_hub import snapshot_download
 
 
 # --------------------------------------------------
@@ -12,15 +12,6 @@ from tokenizers import Tokenizer
 # --------------------------------------------------
 
 MODEL_REPO = "Xenova/nli-deberta-v3-xsmall"
-
-CACHE_DIR = (
-    Path.home()
-    / ".cache"
-    / "huggingface"
-    / "hub"
-    / "models--Xenova--nli-deberta-v3-xsmall"
-    / "snapshots"
-)
 
 LABELS = {
     0: "Contradiction",
@@ -30,51 +21,49 @@ LABELS = {
 
 
 # --------------------------------------------------
-# FIND DOWNLOADED MODEL
+# DOWNLOAD MODEL AUTOMATICALLY
 # --------------------------------------------------
 
-def find_model_directory():
+def download_model():
 
-    if not CACHE_DIR.exists():
-        raise FileNotFoundError(
-            "NLI model cache directory was not found."
-        )
+    print("Loading NLI model...")
 
-    for snapshot in CACHE_DIR.iterdir():
-
-        model_file = (
-            snapshot / "onnx" / "model_quantized.onnx"
-        )
-
-        tokenizer_file = snapshot / "tokenizer.json"
-        config_file = snapshot / "config.json"
-
-        if (
-            model_file.exists()
-            and tokenizer_file.exists()
-            and config_file.exists()
-        ):
-            return snapshot
-
-    raise FileNotFoundError(
-        "Required ONNX model or tokenizer files were not found."
+    model_dir = snapshot_download(
+        repo_id=MODEL_REPO,
+        allow_patterns=[
+            "onnx/model_quantized.onnx",
+            "tokenizer.json"
+        ]
     )
+
+    return Path(model_dir)
 
 
 # --------------------------------------------------
 # LOAD MODEL AND TOKENIZER
 # --------------------------------------------------
 
-print("Loading NLI model...")
+MODEL_DIR = download_model()
 
-MODEL_DIR = find_model_directory()
+model_file = MODEL_DIR / "onnx" / "model_quantized.onnx"
+tokenizer_file = MODEL_DIR / "tokenizer.json"
+
+if not model_file.exists():
+    raise FileNotFoundError(
+        "NLI ONNX model file was not downloaded."
+    )
+
+if not tokenizer_file.exists():
+    raise FileNotFoundError(
+        "NLI tokenizer file was not downloaded."
+    )
 
 tokenizer = Tokenizer.from_file(
-    str(MODEL_DIR / "tokenizer.json")
+    str(tokenizer_file)
 )
 
 session = ort.InferenceSession(
-    str(MODEL_DIR / "onnx" / "model_quantized.onnx"),
+    str(model_file),
     providers=["CPUExecutionProvider"]
 )
 
